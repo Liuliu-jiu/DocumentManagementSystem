@@ -62,7 +62,7 @@ git@github.com:Liuliu-jiu/DocumentManagementSystem.git
 2.文件->打开文件或项目  
 3.打开Cmake文件  
 4.选择mingw编译器  
-5.点击configure Project
+5.点击configure Project  
 6.构建完成后，在build\Desktop_Qt_6_8_3_MinGW_64_bit-Debug这个文件夹下新建一个名为testRecordFile文件夹，用于从存放程序所管理的文件
 
 # 特此说明
