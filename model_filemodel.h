@@ -18,6 +18,9 @@
 #include<QFuture>
 #include<QElapsedTimer>
 #include"logsystem.h"
+
+//__FILE__表示当前源文件路径的宏定义，可能是相对路径也有可能是绝对路径，取决于编译器，我需要获取到绝对路径，因此通过QFileInfo来进行路径转换
+#define INK_NOTE_DATABASE_PATH QFileInfo(__FILE__).absoluteDir().absolutePath() + "/ink_note_database.db"
 class Model_FileModel : public QObject
 {
     Q_OBJECT
