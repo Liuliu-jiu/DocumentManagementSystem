@@ -45,7 +45,7 @@ std::shared_ptr<QSqlQuery> Model_FileModel::initMysqlConnect(QString connectName
 {
     //确定数据库驱动类型
     qsqlDB = QSqlDatabase::addDatabase("QSQLITE",connectName);
-    qsqlDB.setDatabaseName("ink_note_database.db");//数据库文件路径
+    qsqlDB.setDatabaseName(INK_NOTE_DATABASE_PATH);//数据库文件路径
 
     //连接数据库
     if(!qsqlDB.open())
