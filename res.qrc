@@ -1,0 +1,43 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>image/circle.png</file>
+        <file>image/excel.png</file>
+        <file>image/frown.png</file>
+        <file>image/ppt.png</file>
+        <file>image/txt.png</file>
+        <file>image/word.png</file>
+        <file>image/x-circle.png</file>
+        <file>image/动画搜索.gif</file>
+        <file>image/对check.png</file>
+        <file>image/蓝色缓冲loading动效.gif</file>
+        <file>image/墨笺笔记图标.png</file>
+        <file>image/正在加载.gif</file>
+        <file>image/文档管理系统.ico</file>
+    </qresource>
+    <qresource prefix="/new/createGuide">
+        <file>image/CreationSteps/creationSteps0.png</file>
+        <file>image/CreationSteps/creationSteps1.png</file>
+        <file>image/CreationSteps/creationSteps2.png</file>
+        <file>image/CreationSteps/creationSteps3.png</file>
+        <file>image/CreationSteps/creationSteps4.png</file>
+        <file>image/CreationSteps/creationSteps5.png</file>
+    </qresource>
+    <qresource prefix="/new/openSystemFileGuide">
+        <file>image/OpenSystemFileSteps/openSystemFileSteps0.png</file>
+        <file>image/OpenSystemFileSteps/openSystemFileSteps1.png</file>
+        <file>image/OpenSystemFileSteps/openSystemFileSteps2.png</file>
+        <file>image/OpenSystemFileSteps/openSystemFileSteps3.png</file>
+        <file>image/OpenSystemFileSteps/openSystemFileSteps4.png</file>
+        <file>image/OpenSystemFileSteps/openSystemFileSteps5.png</file>
+    </qresource>
+    <qresource prefix="/new/findOnePathGuide">
+        <file>image/FindOnePathSteps/findOnePathSteps0.png</file>
+        <file>image/FindOnePathSteps/findOnePathSteps1.png</file>
+        <file>image/FindOnePathSteps/findOnePathSteps2.png</file>
+        <file>image/FindOnePathSteps/findOnePathSteps3.png</file>
+    </qresource>
+    <qresource prefix="/new/findAllSystemFile">
+        <file>image/FindAllSystemFileSteps/findAllSystemFileSteps0.png</file>
+        <file>image/FindAllSystemFileSteps/findAllSystemFileSteps1.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>View_FileSearchResultsWindow</class>
+ <widget class="QMainWindow" name="View_FileSearchResultsWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#View_FileSearchResultsWindow
+{
+	background-color : qlineargradient(spread:pad, x1:0, y1:0.654568, x2:1, y2:1, stop:0 rgba(28, 0, 180, 255), stop:0.311111 rgba(0, 170, 255, 255), stop:0.683333 rgba(163, 125, 187, 255))
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="styleSheet">
+       <string notr="true">/*
+#widget_2 // 利用#对象名的方式防止子控件继承父控件的样式
+{
+	background-color:rgb(0, 170, 127);
+}
+*/
+/*进度条的背景部分*/
+QProgressBar
+{
+	min-height : 40px;
+	max-height : 40px;
+	border:5px solid rgb(126, 126, 126)；
+}
+
+/*#进度条已完成的进度样式*/
+QProgressBar::chunk
+{
+	min-height : 40px;
+	max-height : 40px;
+	background-color : rgb(0, 170, 0);
+	background :qlineargradient(x1 : 0, y1:0, x2 : 1,y2 : 0,stop:0 rgb(170, 85, 0),stop:1 rgb(0, 255, 255));/*设置水平渐变，从橙色到蓝色*/
+}</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QProgressBar" name="progressBar">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="value">
+          <number>24</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="textVisible">
+          <bool>true</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="textDirection">
+          <enum>QProgressBar::Direction::TopToBottom</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QTextEdit" name="textEdit">
+         <property name="styleSheet">
+          <string notr="true">#textEdit
+{
+	background-color:qlineargradient(spread:pad, x1:0.286, y1:0.34, x2:0.653, y2:0.534, stop:0 rgba(0, 66, 198, 255), stop:1 rgba(142, 142, 213, 255));
+	color :rgb(255, 255, 255);
+}
+</string>
+         </property>
+         <property name="documentTitle">
+          <string>1111</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTreeView" name="treeView">
+         <property name="editTriggers">
+          <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+         </property>
+         <property name="animated">
+          <bool>true</bool>
+         </property>
+         <property name="allColumnsShowFocus">
+          <bool>true</bool>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="pushButtonWidget" native="true">
+      <property name="styleSheet">
+       <string notr="true">/*父控件会将子控件的样式覆盖，那我直接在父控件的样式表设置子控件的样式*/
+/*设置QPushButton默认样式*/
+/*设置默认效果*/
+QPushButton
+{
+	height : 30px;
+	width : 60px;
+	background : qlineargradient(x1:0,y1:0,x2:1,y2:0,stop:0 rgb(0, 0, 80),stop:1 rgb(0, 104, 156));
+	border : none ;
+	border-radius:2px;
+	color :rgb(180, 180, 155)
+}
+
+/*设置悬停效果(先设置默认效果再设置悬停效果)*/
+QPushButton:hover
+{
+	background-color: rgb(99, 99, 99);	
+}
+</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>取消搜索</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Policy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

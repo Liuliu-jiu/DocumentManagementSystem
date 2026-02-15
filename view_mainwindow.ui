@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>View_MainWindow</class>
+ <widget class="QMainWindow" name="View_MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow
+{
+	background-color : rgb(44, 62, 80);
+}
+/*#menubar::item
+{
+	background-color : rgb(255, 170, 0);
+}
+#menubar::item:hover
+{
+	color : rgb(255, 255, 255);
+	background-color : rgb(170, 0, 0);
+	border : 10px solid rgb(0, 0, 0);
+}*/</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">#treeView
+{
+	background-color :  #f5f7fa;
+}
+/*#treeView::item
+{
+	background-color : qlineargradient(spread:pad, x1:0.106, y1:0.045, x2:0.811222, y2:0.716, stop:0 rgba(118, 118, 118, 255), stop:1 rgba(255, 255, 255, 255))
+}*/</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTreeView" name="treeView">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="midLineWidth">
+       <number>0</number>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+      </property>
+      <property name="animated">
+       <bool>true</bool>
+      </property>
+      <property name="allColumnsShowFocus">
+       <bool>true</bool>
+      </property>
+      <attribute name="headerHighlightSections">
+       <bool>true</bool>
+      </attribute>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <widget class="QMenu" name="createFileMenu">
+     <property name="title">
+      <string>创建笔记</string>
+     </property>
+     <widget class="QMenu" name="menuWord">
+      <property name="title">
+       <string>Word</string>
+      </property>
+      <addaction name="actiondoc"/>
+      <addaction name="actiondocx"/>
+     </widget>
+     <widget class="QMenu" name="menuExcel">
+      <property name="title">
+       <string>Excel</string>
+      </property>
+      <addaction name="actionxls"/>
+      <addaction name="actionxlsx"/>
+     </widget>
+     <widget class="QMenu" name="menuPPT">
+      <property name="title">
+       <string>PPT</string>
+      </property>
+      <addaction name="actionppt"/>
+      <addaction name="actionpptx"/>
+     </widget>
+     <addaction name="actionTXT"/>
+     <addaction name="menuWord"/>
+     <addaction name="menuExcel"/>
+     <addaction name="menuPPT"/>
+    </widget>
+    <widget class="QMenu" name="openFileMenu">
+     <property name="title">
+      <string>打开笔记</string>
+     </property>
+     <addaction name="actionTXT_2"/>
+     <addaction name="actionWord"/>
+     <addaction name="actionExcel"/>
+     <addaction name="actionPPT"/>
+    </widget>
+    <addaction name="createFileMenu"/>
+    <addaction name="openFileMenu"/>
+    <addaction name="actionSerachFile"/>
+    <addaction name="actionFindAllSystemFile"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionFunctionGuide"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionTXT">
+   <property name="text">
+    <string>TXT</string>
+   </property>
+  </action>
+  <action name="actiondoc">
+   <property name="text">
+    <string>doc</string>
+   </property>
+  </action>
+  <action name="actiondocx">
+   <property name="text">
+    <string>docx</string>
+   </property>
+  </action>
+  <action name="actionxls">
+   <property name="text">
+    <string>xls</string>
+   </property>
+  </action>
+  <action name="actionxlsx">
+   <property name="text">
+    <string>xlsx</string>
+   </property>
+  </action>
+  <action name="actionppt">
+   <property name="text">
+    <string>ppt</string>
+   </property>
+  </action>
+  <action name="actionpptx">
+   <property name="text">
+    <string>pptx</string>
+   </property>
+  </action>
+  <action name="actionTXT_2">
+   <property name="text">
+    <string>TXT</string>
+   </property>
+  </action>
+  <action name="actionWord">
+   <property name="text">
+    <string>Word</string>
+   </property>
+  </action>
+  <action name="actionExcel">
+   <property name="text">
+    <string>Excel</string>
+   </property>
+  </action>
+  <action name="actionPPT">
+   <property name="text">
+    <string>PPT</string>
+   </property>
+  </action>
+  <action name="actionSerachFile">
+   <property name="text">
+    <string>查找某个路径文件(txt,word,excel,ppt)</string>
+   </property>
+  </action>
+  <action name="actionFindAllSystemFile">
+   <property name="text">
+    <string>查找所有盘下的文件(txt,word,excel,ppt)</string>
+   </property>
+  </action>
+  <action name="actionFunctionGuide">
+   <property name="text">
+    <string>功能指引</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
