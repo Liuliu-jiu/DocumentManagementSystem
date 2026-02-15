@@ -1,0 +1,2 @@
+# DocumentManagementSystem
+基于Qt和SQLite制作的文档管理系统
